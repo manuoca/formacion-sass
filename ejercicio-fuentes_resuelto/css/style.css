@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+span.fuente-cuerpo {
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+}
+span.fuente-cuerpo:before {
+  content: "Open Sans, sans-serif";
+}
+
+article.fuente-cuerpo h3 {
+  margin: 1em 0 0 0;
+  font-size: 3rem;
+  font-family: Open Sans, sans-serif;
+}
+article.fuente-cuerpo h3:before {
+  content: "Open Sans, sans-serif";
+}
+article.fuente-cuerpo div span.color-principal-1 {
+  font-weight: 700;
+  color: #B22222;
+  font-size: 2rem;
+}
+article.fuente-cuerpo div span.color-principal-2 {
+  font-weight: 700;
+  color: #ADFF2F;
+  font-size: 2rem;
+}
+article.fuente-cuerpo div span.color-principal-3 {
+  font-weight: 700;
+  color: #00BFFF;
+  font-size: 2rem;
+}
+article.fuente-cuerpo div span.color-principal-4 {
+  font-weight: 700;
+  color: #8A2BE2;
+  font-size: 2rem;
+}
+article.fuente-cuerpo div span.color-claro {
+  font-weight: 700;
+  color: #AAA;
+  font-size: 2rem;
+}
+
+span.fuente-titulos {
+  font-family: Abril Fatface, cursive;
+  font-weight: 700;
+}
+span.fuente-titulos:before {
+  content: "Abril Fatface, cursive";
+}
+
+article.fuente-titulos h3 {
+  margin: 1em 0 0 0;
+  font-size: 3rem;
+  font-family: Abril Fatface, cursive;
+}
+article.fuente-titulos h3:before {
+  content: "Abril Fatface, cursive";
+}
+article.fuente-titulos div span.color-principal-1 {
+  font-weight: 700;
+  color: #B22222;
+  font-size: 2rem;
+}
+article.fuente-titulos div span.color-principal-2 {
+  font-weight: 700;
+  color: #ADFF2F;
+  font-size: 2rem;
+}
+article.fuente-titulos div span.color-principal-3 {
+  font-weight: 700;
+  color: #00BFFF;
+  font-size: 2rem;
+}
+article.fuente-titulos div span.color-principal-4 {
+  font-weight: 700;
+  color: #8A2BE2;
+  font-size: 2rem;
+}
+article.fuente-titulos div span.color-claro {
+  font-weight: 700;
+  color: #AAA;
+  font-size: 2rem;
+}
+
+.titulos div {
+  height: 5em;
+}
+.titulos label {
+  width: 10%;
+  font-size: 2rem;
+  display: inline-block;
+  color: #AAA;
+  font-weight: 700;
+}
+.titulos h1 {
+  width: 90%;
+  display: inline-block;
+  margin: 0;
+}
+.titulos h2 {
+  width: 90%;
+  display: inline-block;
+  margin: 0;
+}
+.titulos h3 {
+  width: 90%;
+  display: inline-block;
+  margin: 0;
+}
+.titulos h4 {
+  width: 90%;
+  display: inline-block;
+  margin: 0;
+}
+.titulos h5 {
+  width: 90%;
+  display: inline-block;
+  margin: 0;
+}
+.titulos h6 {
+  width: 90%;
+  display: inline-block;
+  margin: 0;
+}
+
+html {
+  margin: 0 auto;
+  max-width: 1400px;
+  font: 1rem Open Sans, sans-serif;
+}
+html h1 {
+  font-family: Abril Fatface, cursive;
+  font-weight: 400;
+  font-size: 4.3333333333rem;
+  margin-bottom: 0;
+}
+html h2 {
+  font-family: Abril Fatface, cursive;
+  font-weight: 400;
+  font-size: 3.6666666667rem;
+  margin-bottom: 0;
+}
+html h3 {
+  font-family: Abril Fatface, cursive;
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+html h4 {
+  font-family: Abril Fatface, cursive;
+  font-weight: 400;
+  font-size: 2.3333333333rem;
+  margin-bottom: 0;
+}
+html h5 {
+  font-family: Abril Fatface, cursive;
+  font-weight: 400;
+  font-size: 1.6666666667rem;
+  margin-bottom: 0;
+}
+html h6 {
+  font-family: Abril Fatface, cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

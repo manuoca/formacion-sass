@@ -1,0 +1,129 @@
+// IMPORTS /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+
+// VARIABLES ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$colores: (
+        color-principal-1: #B22222,
+        color-principal-2: #ADFF2F,
+        color-principal-3: #00BFFF,
+        color-principal-4: #8A2BE2,
+        color-claro: #AAA
+);
+
+$fuentes: (
+        fuente-cuerpo: #{"Open Sans", sans-serif},
+        fuente-titulos: #{"Abril Fatface", cursive},
+);
+
+$weights: (
+        normal: 400,
+        bold: 700
+);
+
+$font-size: 1rem;
+
+$max-width: 1400px;
+
+
+// MIXINS //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin titulos{
+
+  @for $i from 1 through 6{
+
+    h#{$i}{
+      font-family: map-get($fuentes, fuente-titulos);
+      font-weight: map-get($weights, normal);
+      font-size: $font-size * (5 - $i/1.5);
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+// TIPOGRAFÍAS /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Recorro el mapa de fuentes
+@each $clave,$valor in $fuentes{
+
+  //Declaro los estilos del span
+  span.#{$clave}{
+    font-family: #{$valor};
+    font-weight: map-get($weights, bold);
+
+    //Escribo los nombres en el span
+    &:before{
+      content: quote(#{$valor});
+    }
+
+  }
+
+  article.#{$clave}{
+
+    h3 {
+      margin: 1em 0 0 0;
+      font-size: 3rem;
+      font-family: #{$valor};
+
+      &:before {
+        content: quote(#{$valor});
+      }
+    }
+
+    //Recorro el mapa de colores
+    @each $clave2,$valor2 in $colores{
+
+      //Declaro los estilos
+      & div span.#{$clave2}{
+        font-weight: map-get($weights, bold);
+        color: $valor2;
+        font-size: 2rem;
+      }
+
+    }
+  }
+
+}
+
+
+// TÍTULOS /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.titulos{
+
+  div{
+    height: 5em;
+  }
+
+  label{
+    width: 10%;
+    font-size: 2rem;
+    display: inline-block;
+    color: map-get($colores,color-claro);
+    font-weight: map-get($weights, bold);
+  }
+
+  @for $i from 1 through 6{
+
+    h#{$i}{
+      width: 90%;
+      display: inline-block;
+      margin: 0;
+    }
+
+  }
+
+}
+
+
+// ESTILOS /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+html{
+  margin: 0 auto;
+  max-width: $max-width;
+  font: map-get($weights, regular) $font-size map-get($fuentes, fuente-cuerpo);
+  @include titulos;
+}

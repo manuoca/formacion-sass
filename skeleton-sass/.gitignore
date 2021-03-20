@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+bower_components/
+main.scss
+main.css
+main.css.map
+index.html
+sassdoc/
+issues/
+docs/

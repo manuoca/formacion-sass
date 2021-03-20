@@ -1,0 +1,198 @@
+// VARIABLES ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$nombres: (
+        color-principal-1: firebrick,
+        color-principal-2: greenyellow,
+        color-principal-3: deepskyblue,
+        color-principal-4: blueviolet,
+);
+
+$colores: (
+        color-principal-1: #B22222,
+        color-principal-2: #ADFF2F,
+        color-principal-3: #00BFFF,
+        color-principal-4: #8A2BE2,
+);
+
+$max-width: 1400px;
+
+$tonalidad: 20%;
+
+$combinacion: 60%;
+
+
+// ESTILOS /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+html{
+  margin: 0 auto;
+  max-width: $max-width;
+  font-family: "Open Sans", sans-serif;
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+
+  h2{
+    width: 100%;
+    margin: 3rem 0 0 0;
+  }
+
+  p{
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  article{
+    width: 23%;
+    padding: 0 1%;
+
+    p label{
+      font-weight: bold;
+    }
+    p span{
+      text-align: right;
+      float: right;
+    }
+  }
+
+}
+
+
+// COLORES PRINCIPALES /////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Recorro el mapa de nombres
+@each $clave,$valor in $nombres{
+
+  //Escribo los nombres
+  .#{$clave} .nombre:before{
+    content: '#{$valor}';
+  }
+
+}
+
+%muestra{
+  width: 100%;
+  height: 6rem;
+}
+
+//Recorro el mapa de colores
+@each $clave,$valor in $colores{
+
+  //Pinto el div de color
+  .#{$clave} .muestra{
+    @extend %muestra;
+    background-color: #{$valor};
+  }
+
+  //Escribo el color en Hex
+  .#{$clave} .hex:before{
+    content: '#{$valor}';
+  }
+
+  //Escribo el color en RGB
+  .#{$clave} .rgb:before{
+    content: '#{red($valor)} / #{green($valor)} / #{blue($valor)}';
+  }
+
+  //Escribo el color en HSL
+  .#{$clave} .hsl:before{
+    content: '#{round(hue($valor))} / #{round(saturation($valor))} / #{round(lightness($valor))}';
+  }
+
+}
+
+
+// TONALIDADES /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Recorro el mapa de nombres
+@each $clave,$valor in $nombres{
+
+  //Escribo los nombres
+  .tonalidades-#{$clave} h3:before{
+    content: '#{$valor}';
+  }
+
+}
+
+%muestra-tonalidad{
+  width: 33.33%;
+  height: 6rem;
+  float: left;
+}
+
+//Recorro el mapa de colores
+@each $clave,$valor in $colores{
+
+  //Pinto el div de color
+  .tonalidades-#{$clave} .muestra div{
+    @extend %muestra-tonalidad;
+    &.claro{
+      background-color: lighten($valor,$tonalidad);
+    }
+    &.normal{
+      background-color: #{$valor};
+    }
+    &.oscuro{
+      background-color: darken($valor,$tonalidad);
+    }
+
+  }
+
+}
+
+
+// COMBINACIONES ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Recorro el mapa de nombres
+@each $clave,$valor in $nombres{
+
+  //Escribo los nombres de los colores principales
+  .combinaciones-#{$clave} h3:before{
+    content: '#{$valor}';
+  }
+
+}
+
+%muestra-combinacion{
+  width: 100%;
+  height: 3rem;
+}
+
+//Recorro el mapa de colores
+@each $clave,$valor in $colores{
+
+  //Pinto el div de color principal
+  .combinaciones-#{$clave} .muestra{
+    @extend %muestra;
+    background-color: #{$valor};
+  }
+
+  //Recorro los divs de combinación
+  @for $i from 1 through 4{
+
+    $mix: color-principal-#{$i};
+
+    @if ($clave != $mix){
+
+      //Escribo el texto de la combinacion
+      .combinaciones-#{$clave} .mix-#{$i} p{
+
+        margin: 1rem 0 0 0;
+
+        &:before{
+          content: "#{map-get($nombres,$clave)} con #{map-get($nombres,$mix)}";
+        }
+      }
+
+      //Pinto el div de la combinacion
+      .combinaciones-#{$clave} .mix-#{$i} div{
+        @extend %muestra-combinacion;
+        background-color: mix($valor, map-get($colores,$mix), $combinacion);
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,347 @@
+html {
+  margin: 0 auto;
+  max-width: 1400px;
+  font-family: "Open Sans", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+section h2 {
+  width: 100%;
+  margin: 3rem 0 0 0;
+}
+section p {
+  width: 100%;
+  margin: 1rem 0;
+}
+section article {
+  width: 23%;
+  padding: 0 1%;
+}
+section article p label {
+  font-weight: bold;
+}
+section article p span {
+  text-align: right;
+  float: right;
+}
+
+.color-principal-1 .nombre:before {
+  content: "firebrick";
+}
+
+.color-principal-2 .nombre:before {
+  content: "greenyellow";
+}
+
+.color-principal-3 .nombre:before {
+  content: "deepskyblue";
+}
+
+.color-principal-4 .nombre:before {
+  content: "blueviolet";
+}
+
+.combinaciones-color-principal-4 .muestra, .combinaciones-color-principal-3 .muestra, .combinaciones-color-principal-2 .muestra, .combinaciones-color-principal-1 .muestra, .color-principal-4 .muestra, .color-principal-3 .muestra, .color-principal-2 .muestra, .color-principal-1 .muestra {
+  width: 100%;
+  height: 6rem;
+}
+
+.color-principal-1 .muestra {
+  background-color: #B22222;
+}
+
+.color-principal-1 .hex:before {
+  content: "#B22222";
+}
+
+.color-principal-1 .rgb:before {
+  content: "178 / 34 / 34";
+}
+
+.color-principal-1 .hsl:before {
+  content: "0deg / 68% / 42%";
+}
+
+.color-principal-2 .muestra {
+  background-color: #ADFF2F;
+}
+
+.color-principal-2 .hex:before {
+  content: "#ADFF2F";
+}
+
+.color-principal-2 .rgb:before {
+  content: "173 / 255 / 47";
+}
+
+.color-principal-2 .hsl:before {
+  content: "84deg / 100% / 59%";
+}
+
+.color-principal-3 .muestra {
+  background-color: #00BFFF;
+}
+
+.color-principal-3 .hex:before {
+  content: "#00BFFF";
+}
+
+.color-principal-3 .rgb:before {
+  content: "0 / 191 / 255";
+}
+
+.color-principal-3 .hsl:before {
+  content: "195deg / 100% / 50%";
+}
+
+.color-principal-4 .muestra {
+  background-color: #8A2BE2;
+}
+
+.color-principal-4 .hex:before {
+  content: "#8A2BE2";
+}
+
+.color-principal-4 .rgb:before {
+  content: "138 / 43 / 226";
+}
+
+.color-principal-4 .hsl:before {
+  content: "271deg / 76% / 53%";
+}
+
+.tonalidades-color-principal-1 h3:before {
+  content: "firebrick";
+}
+
+.tonalidades-color-principal-2 h3:before {
+  content: "greenyellow";
+}
+
+.tonalidades-color-principal-3 h3:before {
+  content: "deepskyblue";
+}
+
+.tonalidades-color-principal-4 h3:before {
+  content: "blueviolet";
+}
+
+.tonalidades-color-principal-4 .muestra div, .tonalidades-color-principal-3 .muestra div, .tonalidades-color-principal-2 .muestra div, .tonalidades-color-principal-1 .muestra div {
+  width: 33.33%;
+  height: 6rem;
+  float: left;
+}
+
+.tonalidades-color-principal-1 .muestra div.claro {
+  background-color: #e05a5a;
+}
+.tonalidades-color-principal-1 .muestra div.normal {
+  background-color: #B22222;
+}
+.tonalidades-color-principal-1 .muestra div.oscuro {
+  background-color: #5c1212;
+}
+
+.tonalidades-color-principal-2 .muestra div.claro {
+  background-color: #d5ff95;
+}
+.tonalidades-color-principal-2 .muestra div.normal {
+  background-color: #ADFF2F;
+}
+.tonalidades-color-principal-2 .muestra div.oscuro {
+  background-color: #79c800;
+}
+
+.tonalidades-color-principal-3 .muestra div.claro {
+  background-color: #66d9ff;
+}
+.tonalidades-color-principal-3 .muestra div.normal {
+  background-color: #00BFFF;
+}
+.tonalidades-color-principal-3 .muestra div.oscuro {
+  background-color: #007399;
+}
+
+.tonalidades-color-principal-4 .muestra div.claro {
+  background-color: #bc85ee;
+}
+.tonalidades-color-principal-4 .muestra div.normal {
+  background-color: #8A2BE2;
+}
+.tonalidades-color-principal-4 .muestra div.oscuro {
+  background-color: #561493;
+}
+
+.combinaciones-color-principal-1 h3:before {
+  content: "firebrick";
+}
+
+.combinaciones-color-principal-2 h3:before {
+  content: "greenyellow";
+}
+
+.combinaciones-color-principal-3 h3:before {
+  content: "deepskyblue";
+}
+
+.combinaciones-color-principal-4 h3:before {
+  content: "blueviolet";
+}
+
+.combinaciones-color-principal-4 .mix-3 div, .combinaciones-color-principal-4 .mix-2 div, .combinaciones-color-principal-4 .mix-1 div, .combinaciones-color-principal-3 .mix-4 div, .combinaciones-color-principal-3 .mix-2 div, .combinaciones-color-principal-3 .mix-1 div, .combinaciones-color-principal-2 .mix-4 div, .combinaciones-color-principal-2 .mix-3 div, .combinaciones-color-principal-2 .mix-1 div, .combinaciones-color-principal-1 .mix-4 div, .combinaciones-color-principal-1 .mix-3 div, .combinaciones-color-principal-1 .mix-2 div {
+  width: 100%;
+  height: 3rem;
+}
+
+.combinaciones-color-principal-1 .muestra {
+  background-color: #B22222;
+}
+
+.combinaciones-color-principal-1 .mix-2 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-1 .mix-2 p:before {
+  content: "firebrick con greenyellow";
+}
+
+.combinaciones-color-principal-1 .mix-2 div {
+  background-color: #b07a27;
+}
+
+.combinaciones-color-principal-1 .mix-3 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-1 .mix-3 p:before {
+  content: "firebrick con deepskyblue";
+}
+
+.combinaciones-color-principal-1 .mix-3 div {
+  background-color: #6b617a;
+}
+
+.combinaciones-color-principal-1 .mix-4 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-1 .mix-4 p:before {
+  content: "firebrick con blueviolet";
+}
+
+.combinaciones-color-principal-1 .mix-4 div {
+  background-color: #a2266f;
+}
+
+.combinaciones-color-principal-2 .muestra {
+  background-color: #ADFF2F;
+}
+
+.combinaciones-color-principal-2 .mix-1 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-2 .mix-1 p:before {
+  content: "greenyellow con firebrick";
+}
+
+.combinaciones-color-principal-2 .mix-1 div {
+  background-color: #afa72a;
+}
+
+.combinaciones-color-principal-2 .mix-3 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-2 .mix-3 p:before {
+  content: "greenyellow con deepskyblue";
+}
+
+.combinaciones-color-principal-2 .mix-3 div {
+  background-color: #68e582;
+}
+
+.combinaciones-color-principal-2 .mix-4 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-2 .mix-4 p:before {
+  content: "greenyellow con blueviolet";
+}
+
+.combinaciones-color-principal-2 .mix-4 div {
+  background-color: #9faa77;
+}
+
+.combinaciones-color-principal-3 .muestra {
+  background-color: #00BFFF;
+}
+
+.combinaciones-color-principal-3 .mix-1 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-3 .mix-1 p:before {
+  content: "deepskyblue con firebrick";
+}
+
+.combinaciones-color-principal-3 .mix-1 div {
+  background-color: #4780a7;
+}
+
+.combinaciones-color-principal-3 .mix-2 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-3 .mix-2 p:before {
+  content: "deepskyblue con greenyellow";
+}
+
+.combinaciones-color-principal-3 .mix-2 div {
+  background-color: #45d9ac;
+}
+
+.combinaciones-color-principal-3 .mix-4 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-3 .mix-4 p:before {
+  content: "deepskyblue con blueviolet";
+}
+
+.combinaciones-color-principal-3 .mix-4 div {
+  background-color: #3784f3;
+}
+
+.combinaciones-color-principal-4 .muestra {
+  background-color: #8A2BE2;
+}
+
+.combinaciones-color-principal-4 .mix-1 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-4 .mix-1 p:before {
+  content: "blueviolet con firebrick";
+}
+
+.combinaciones-color-principal-4 .mix-1 div {
+  background-color: #9a2795;
+}
+
+.combinaciones-color-principal-4 .mix-2 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-4 .mix-2 p:before {
+  content: "blueviolet con greenyellow";
+}
+
+.combinaciones-color-principal-4 .mix-2 div {
+  background-color: #98809a;
+}
+
+.combinaciones-color-principal-4 .mix-3 p {
+  margin: 1rem 0 0 0;
+}
+.combinaciones-color-principal-4 .mix-3 p:before {
+  content: "blueviolet con deepskyblue";
+}
+
+.combinaciones-color-principal-4 .mix-3 div {
+  background-color: #5366ee;
+}
+
+/*# sourceMappingURL=style.css.map */
