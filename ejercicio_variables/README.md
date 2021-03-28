@@ -6,4 +6,5 @@
 > 2.  Tamaño de fuente de la página a 18px
 > 3.  El margen de .wrapper a 0 60px
 > 4.  Fondo de header y footer a yellow
-> 5.  Alto de header y footer a 50px 6. Fondo de .main a cyan
+> 5.  Alto de header y footer a 50px
+> 6.  Fondo de .main a cyan
