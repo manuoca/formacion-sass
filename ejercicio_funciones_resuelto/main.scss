@@ -1,0 +1,8 @@
+@function lh($lineHeight, $fontSize) {
+    @return ($lineHeight * 100% / $fontSize);
+}
+
+p {
+    font-size: 18px;
+    line-height: lh(24, 18);
+}
