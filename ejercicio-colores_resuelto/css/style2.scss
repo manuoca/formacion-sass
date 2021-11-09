@@ -1,0 +1,133 @@
+// Variables /////////////////////
+
+$catalogo-colores: (
+  #4682b4,  // steelblue
+  #ff69b4,  // hotpink
+  #daa520,  // goldenrod
+  #228b22   // forestgreen
+);
+
+$max-width: 1200px;
+
+$tonalidad: 25%;
+$combinacion: 60%;
+
+$h-muestra: 75px;
+
+
+// Estilos //////////////////////
+
+html {
+  margin: 0 auto;
+  max-width: $max-width;
+  font-family: "Open Sans", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+
+  h2 {
+    flex: 1 0 100%;
+    margin: 3rem 0 0 0;
+  }
+
+  p {
+    flex: 1 0 100%;
+    margin: 1rem 0;
+  }
+
+  article {
+    flex: 1;
+    padding: 1rem;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      label {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@for $i from 1 through length($catalogo-colores) {
+  $col: nth($catalogo-colores, $i);
+  $col-name: "#{rgb(red($col), green($col), blue($col))}";
+  $col-rgb: "#{red($col)} / #{green($col)} / #{blue($col)}";
+  $col-hsl: "#{round(hue($col))} / #{round(saturation($col))} / #{round(lightness($col))}";
+
+  .color-principal-#{$i} {
+    .muestra {
+      background-color: $col;
+      height: $h-muestra;
+    }
+
+    .datos {
+      .nombre::before {
+        content: $col-name;
+      }
+      .hex::before {
+        content: "#{$col}";
+      }
+      .rgb::before {
+        content: $col-rgb;
+      }
+      .hsl::before {
+        content: $col-hsl;
+      }
+    }
+  }
+
+  .tonalidades-color-principal-#{$i} {
+    h3:before {
+      content: $col-name;
+    }
+    .muestra {
+      display: flex;
+      height: $h-muestra;
+
+      & > div {
+        flex: 1;
+      }
+
+      .claro {
+        background-color: lighten($col, $tonalidad);
+      }
+      .normal {
+        background-color: $col;
+      }
+      .oscuro {
+        background-color: darken($col, $tonalidad);
+      }
+    }
+  }
+
+  .combinaciones-color-principal-#{$i} {
+    h3:before {
+      content: $col-name;
+    }
+    .muestra {
+      background-color: $col;
+      height: $h-muestra;
+    }
+
+    @for $m from 1 through length($catalogo-colores) {
+      @if $i != $m {
+        $col-mix: nth($catalogo-colores, $m);
+        $col-name-mix: "#{rgb(red($col-mix), green($col-mix), blue($col-mix))}";
+
+        .mix-#{$m} {
+          p:before {
+            content: $col-name + " con " + $col-name-mix;
+          }
+
+          div {
+              height: $h-muestra / 2;
+              background-color: mix($col, $col-mix, 60%);
+          }
+        }
+      }
+    }
+  }
+}
