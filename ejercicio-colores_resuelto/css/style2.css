@@ -1,0 +1,295 @@
+html {
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: "Open Sans", sans-serif;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+section h2 {
+  flex: 1 0 100%;
+  margin: 3rem 0 0 0;
+}
+section p {
+  flex: 1 0 100%;
+  margin: 1rem 0;
+}
+section article {
+  flex: 1;
+  padding: 1rem;
+}
+section article p {
+  display: flex;
+  justify-content: space-between;
+}
+section article p label {
+  font-weight: bold;
+}
+
+.color-principal-1 .muestra {
+  background-color: #4682b4;
+  height: 75px;
+}
+.color-principal-1 .datos .nombre::before {
+  content: "steelblue";
+}
+.color-principal-1 .datos .hex::before {
+  content: "#4682b4";
+}
+.color-principal-1 .datos .rgb::before {
+  content: "70 / 130 / 180";
+}
+.color-principal-1 .datos .hsl::before {
+  content: "207deg / 44% / 49%";
+}
+
+.tonalidades-color-principal-1 h3:before {
+  content: "steelblue";
+}
+.tonalidades-color-principal-1 .muestra {
+  display: flex;
+  height: 75px;
+}
+.tonalidades-color-principal-1 .muestra > div {
+  flex: 1;
+}
+.tonalidades-color-principal-1 .muestra .claro {
+  background-color: #a0bfda;
+}
+.tonalidades-color-principal-1 .muestra .normal {
+  background-color: #4682b4;
+}
+.tonalidades-color-principal-1 .muestra .oscuro {
+  background-color: #224058;
+}
+
+.combinaciones-color-principal-1 h3:before {
+  content: "steelblue";
+}
+.combinaciones-color-principal-1 .muestra {
+  background-color: #4682b4;
+  height: 75px;
+}
+.combinaciones-color-principal-1 .mix-2 p:before {
+  content: "steelblue con hotpink";
+}
+.combinaciones-color-principal-1 .mix-2 div {
+  height: 37.5px;
+  background-color: #9078b4;
+}
+.combinaciones-color-principal-1 .mix-3 p:before {
+  content: "steelblue con goldenrod";
+}
+.combinaciones-color-principal-1 .mix-3 div {
+  height: 37.5px;
+  background-color: #819079;
+}
+.combinaciones-color-principal-1 .mix-4 p:before {
+  content: "steelblue con forestgreen";
+}
+.combinaciones-color-principal-1 .mix-4 div {
+  height: 37.5px;
+  background-color: #38867a;
+}
+
+.color-principal-2 .muestra {
+  background-color: #ff69b4;
+  height: 75px;
+}
+.color-principal-2 .datos .nombre::before {
+  content: "hotpink";
+}
+.color-principal-2 .datos .hex::before {
+  content: "#ff69b4";
+}
+.color-principal-2 .datos .rgb::before {
+  content: "255 / 105 / 180";
+}
+.color-principal-2 .datos .hsl::before {
+  content: "330deg / 100% / 71%";
+}
+
+.tonalidades-color-principal-2 h3:before {
+  content: "hotpink";
+}
+.tonalidades-color-principal-2 .muestra {
+  display: flex;
+  height: 75px;
+}
+.tonalidades-color-principal-2 .muestra > div {
+  flex: 1;
+}
+.tonalidades-color-principal-2 .muestra .claro {
+  background-color: #ffe9f4;
+}
+.tonalidades-color-principal-2 .muestra .normal {
+  background-color: #ff69b4;
+}
+.tonalidades-color-principal-2 .muestra .oscuro {
+  background-color: #e90074;
+}
+
+.combinaciones-color-principal-2 h3:before {
+  content: "hotpink";
+}
+.combinaciones-color-principal-2 .muestra {
+  background-color: #ff69b4;
+  height: 75px;
+}
+.combinaciones-color-principal-2 .mix-1 p:before {
+  content: "hotpink con steelblue";
+}
+.combinaciones-color-principal-2 .mix-1 div {
+  height: 37.5px;
+  background-color: #b573b4;
+}
+.combinaciones-color-principal-2 .mix-3 p:before {
+  content: "hotpink con goldenrod";
+}
+.combinaciones-color-principal-2 .mix-3 div {
+  height: 37.5px;
+  background-color: #f08179;
+}
+.combinaciones-color-principal-2 .mix-4 p:before {
+  content: "hotpink con forestgreen";
+}
+.combinaciones-color-principal-2 .mix-4 div {
+  height: 37.5px;
+  background-color: #a7777a;
+}
+
+.color-principal-3 .muestra {
+  background-color: #daa520;
+  height: 75px;
+}
+.color-principal-3 .datos .nombre::before {
+  content: "goldenrod";
+}
+.color-principal-3 .datos .hex::before {
+  content: "#daa520";
+}
+.color-principal-3 .datos .rgb::before {
+  content: "218 / 165 / 32";
+}
+.color-principal-3 .datos .hsl::before {
+  content: "43deg / 74% / 49%";
+}
+
+.tonalidades-color-principal-3 h3:before {
+  content: "goldenrod";
+}
+.tonalidades-color-principal-3 .muestra {
+  display: flex;
+  height: 75px;
+}
+.tonalidades-color-principal-3 .muestra > div {
+  flex: 1;
+}
+.tonalidades-color-principal-3 .muestra .claro {
+  background-color: #eed28b;
+}
+.tonalidades-color-principal-3 .muestra .normal {
+  background-color: #daa520;
+}
+.tonalidades-color-principal-3 .muestra .oscuro {
+  background-color: #6b5110;
+}
+
+.combinaciones-color-principal-3 h3:before {
+  content: "goldenrod";
+}
+.combinaciones-color-principal-3 .muestra {
+  background-color: #daa520;
+  height: 75px;
+}
+.combinaciones-color-principal-3 .mix-1 p:before {
+  content: "goldenrod con steelblue";
+}
+.combinaciones-color-principal-3 .mix-1 div {
+  height: 37.5px;
+  background-color: #9f975b;
+}
+.combinaciones-color-principal-3 .mix-2 p:before {
+  content: "goldenrod con hotpink";
+}
+.combinaciones-color-principal-3 .mix-2 div {
+  height: 37.5px;
+  background-color: #e98d5b;
+}
+.combinaciones-color-principal-3 .mix-4 p:before {
+  content: "goldenrod con forestgreen";
+}
+.combinaciones-color-principal-3 .mix-4 div {
+  height: 37.5px;
+  background-color: #909b21;
+}
+
+.color-principal-4 .muestra {
+  background-color: #228b22;
+  height: 75px;
+}
+.color-principal-4 .datos .nombre::before {
+  content: "forestgreen";
+}
+.color-principal-4 .datos .hex::before {
+  content: "#228b22";
+}
+.color-principal-4 .datos .rgb::before {
+  content: "34 / 139 / 34";
+}
+.color-principal-4 .datos .hsl::before {
+  content: "120deg / 61% / 34%";
+}
+
+.tonalidades-color-principal-4 h3:before {
+  content: "forestgreen";
+}
+.tonalidades-color-principal-4 .muestra {
+  display: flex;
+  height: 75px;
+}
+.tonalidades-color-principal-4 .muestra > div {
+  flex: 1;
+}
+.tonalidades-color-principal-4 .muestra .claro {
+  background-color: #57d657;
+}
+.tonalidades-color-principal-4 .muestra .normal {
+  background-color: #228b22;
+}
+.tonalidades-color-principal-4 .muestra .oscuro {
+  background-color: #092509;
+}
+
+.combinaciones-color-principal-4 h3:before {
+  content: "forestgreen";
+}
+.combinaciones-color-principal-4 .muestra {
+  background-color: #228b22;
+  height: 75px;
+}
+.combinaciones-color-principal-4 .mix-1 p:before {
+  content: "forestgreen con steelblue";
+}
+.combinaciones-color-principal-4 .mix-1 div {
+  height: 37.5px;
+  background-color: #30875c;
+}
+.combinaciones-color-principal-4 .mix-2 p:before {
+  content: "forestgreen con hotpink";
+}
+.combinaciones-color-principal-4 .mix-2 div {
+  height: 37.5px;
+  background-color: #7a7d5c;
+}
+.combinaciones-color-principal-4 .mix-3 p:before {
+  content: "forestgreen con goldenrod";
+}
+.combinaciones-color-principal-4 .mix-3 div {
+  height: 37.5px;
+  background-color: #6c9521;
+}
+
+/*# sourceMappingURL=style.css.map */
